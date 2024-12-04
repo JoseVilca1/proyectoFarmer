@@ -1,32 +1,295 @@
-*{
-  margin: 0px;
-  padding: 0px;
+/* Reseteo de márgenes y padding, y definimos el box-sizing para todos los elementos */
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  background-color: black; /* Fondo blanco */
+  color: black; /* Texto negro */
+  font-size: 18px; /* Tamaño de fuente base más grande */
+  font-family: 'Arial', sans-serif; /* Fuente base */
 }
 
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh; /* Asegura que ocupe toda la pantalla */
 }
 
-.App-link {
-  color: #61dafb;
-}
-body {
-  background-color: black;
+.App-header {
+  background-color: black; /* Azul oscuro */
   color: white;
-  font-size: 40px;
+  padding: 0;
+  height: 100px; /* Altura de la cabecera */
 }
-.superior{
+
+.App-header span {
+  font-size: 50px; /* Titulo más grande */
+  font-weight: bold; /* Negrita */
+}
+
+.superior {
   width: 100%;
-  height: 200px;
-  background-color: rgb(0, 110, 255);
+  height: 250px;
+  background-color: white; /* Azul brillante */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.contendio{
+
+.superior h1 {
+  font-size: 40px; /* Fuente más grande */
+  color: black;
+  font-weight: bold; /* Negrita */
+}
+
+.inferior {
   width: 100%;
-  height: 600px;
-  background-color: #61dafb;
+  background-color: white; /* Azul claro */
+  padding: 20px;
+  color: black;
 }
-.footer{
-  width: 100%; height: 150px; 
-  background-color: rgb(0, 110, 255);
+
+.inferior h2 {
+  font-size: px; /* Fuente más grande */
+  font-weight: bold; /* Negrita */
+}
+
+/* Imagen 2: en la parte superior izquierda, pequeña *//* Imagen 2 */
+.imagen-2 {
+  position: absolute;
+  top: 75px;
+  left: 150px;
+  width: 100px; /* Ajusta el tamaño de la imagen */
+  height: auto;
+}
+
+.imagen-2 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Imagen 1: centrada y grande */
+.imagen-1 {
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
+.imagen-1 img {
+  width: 100%; /* Ancho ajustado */
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Estilos de las imágenes pequeñas en fila */
+.imagenes-fila {
+  display: flex;
+  justify-content: space-between;
+  margin-top: px;
+}
+
+.imagenes-fila img {
+  width: 20%; /* Ajusta el tamaño para que quepan bien */
+  height: auto;
+}
+
+/* Footer */
+footer {
+  background-color: white; /* Fondo blanco */
+  color: black;
+  padding: 100px 0;
+  text-align: left; /* Alineamos el texto a la izquierda */
+  font-size: 50px; /* Tamaño de fuente ajustado */
+  padding-left: 20px; /* Alineamos el contenido a la izquierda */
+  position: relative; /* Esto permite que puedas moverlo si lo necesitas */
+}
+
+
+footer h4, footer h5 {
+  font-weight: bold; /* Negrita */
+
+}
+
+/* Estilos para el formulario de login */
+.login-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: px; /* Para que el formulario no quede pegado al top */
+}
+
+.login-form input {
+  margin: 10px 0;
+  padding: 10px;
+  width: 80%;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.login-form button {
+  padding: 10px 20px;
+  background-color: #ff6347; /* Rojo brillante */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #ff4500; /* Rojo más fuerte */
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.App-header {
+  background-color: #000;
+  color: white;
+  padding: 20px;
+}
+
+.login-form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.login-form input {
+  margin: 10px 0;
+  padding: 10px;
+  width: 80%;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.login-form button {
+  padding: 10px 20px;
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #ff4500;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+}
+
+.images {
+  margin-top: 20px;
+}
+
+.imagen-grande {
+  width: 100%;
+  height: auto;
+}
+
+.imagen-pequena {
+  width: 24%;
+  margin: 10px;
+}
+
+.imagen-2, .imagen-1 {
+  margin: 10px 0;
+}
+
+
+
+/* Estilos para las Cards de imágenes */
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Espacio entre las cards */
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  background-color: white;
+  border: 10px solid #ccc;
+  width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-100px); /* Efecto de hover */
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card-title {
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+
+
+button {
+  background-color: #4CAF50; /* Verde */
+  color: white;
+  font-size: 1rem;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-transform: uppercase;
+}
+
+/* Estilo al pasar el cursor (hover) */
+button:hover {
+  background-color: #45a049; /* Verde más oscuro */
+  transform: scale(1.05); /* Efecto de agrandar el botón */
+}
+
+/* Estilo al hacer clic (activo) */
+button:active {
+  background-color: #388e3c; /* Verde más oscuro cuando se hace clic */
+}
+
+/* Estilo de los botones de selección de sección */
+button:focus {
+  outline: none; /* Elimina el borde del foco */
+  box-shadow: 0 0 10px rgba(72, 233, 121, 0.6); /* Efecto de sombra */
 }
